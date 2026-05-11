@@ -14,7 +14,7 @@ module.exports = {
       name: "043-ml",
       cwd: "./services/mlservice",
       script: "app.py",
-      interpreter: "python",
+      interpreter: "./venv/Scripts/python.exe",
       watch: false,
       env_file: "../../.env",
       env: {
