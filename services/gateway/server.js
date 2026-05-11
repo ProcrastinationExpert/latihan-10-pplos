@@ -1,6 +1,8 @@
+require("dotenv").config({ path: "../../.env" });
 const express = require("express");
 const axios = require("axios");
 const rateLimit = require("express-rate-limit");
+require("dotenv").config();
 
 const app = express();
 
@@ -51,7 +53,7 @@ app.post("/klasifikasi", async (req, res) => {
   }
 });
 
-const PORT = 9126;
+const PORT = process.env.NODE_PORT;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`API Gateway Service berjalan di port ${PORT}`);
 });

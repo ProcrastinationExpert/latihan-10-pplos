@@ -1,0 +1,23 @@
+{
+  "name": "latihan10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProcrastinationExpert/latihan-10-pplos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProcrastinationExpert/latihan-10-pplos/issues"
+  },
+  "homepage": "https://github.com/ProcrastinationExpert/latihan-10-pplos#readme",
+  "dependencies": {
+    "pm2": "^7.0.1"
+  }
+}

@@ -1,4 +1,9 @@
 from flask import Flask, request, jsonify
+import os
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path="../../.env")
+
 
 app = Flask(__name__)
 
@@ -10,16 +15,16 @@ def prediksi():
         return jsonify({"error": "Format data salah. Masukkan ph dan lembap_udara"}), 400
 
     ph = data['ph']
-    humidity = data['lembap_udara']
+    kelembapan = data['lembap_udara']
     
     prediksi_hasil = "Ideal"
     if ph < 5.5:
         prediksi_hasil = "Terlalu Asam"
     elif ph > 7.5:
         prediksi_hasil = "Terlalu Basa"
-    elif humidity < 60:
+    elif kelembapan < 60:
         prediksi_hasil = "Kering"
-    elif humidity > 90:
+    elif kelembapan > 90:
         prediksi_hasil = "Terlalu Lembap"
         
     confidence = 0.85
@@ -30,4 +35,4 @@ def prediksi():
     })
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=9127)
+    app.run(host='localhost', port=int(os.environ.get('PYTHON_PORT')))
