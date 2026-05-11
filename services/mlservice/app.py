@@ -30,4 +30,4 @@ def prediksi():
     })
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=9126)
+    app.run(host='localhost', port=9127)
